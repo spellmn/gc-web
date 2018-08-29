@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color 0.20s;
+    background-color: #666A00;
+}
+
+.sidenav {
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.10s;
+    position: absolute;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.20s;
+
+}
+
+.sidenav a:hover {
+    color: #666A00;
+}
+
+.sidenav .closebtn {
+	width: 20px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    font-size: 36px;
+    /* margin-left: 50px; */
+
+}
+
+#main {
+	width: 100%;
+	height: 100%;
+    position: absolute;
+    top: 0px;
+    transition: margin-left .5s;
+    padding: 16px;
+    padding-top: 16px;
+    margin-left: 30px; 
+    
+    background-color: #111;
+    color: green;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+span {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+img {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="#" id="burger"><img src='burger.png' style='height: 28px; width: 28px;' onclick="flipNav()"></a>
+  <a href="#" id="xact"><div style='height: 34px;'><span><img src='xact.png' style='height: 28px; width: 28px;'></span></div></a>
+  <a href="#" id="client"><div style='height: 34px;'><span><img src='client.png' style='height: 28px; width: 28px;'></span></div></a>
+  <a href="#" id="item"><div style='height: 34px;'><span><img src='item.png' style='height: 28px; width: 28px;'></span></div></a>
+  <a href="#" id="settings"><div style='height: 34px;'><span><img src='settings.png' style='height: 28px; width: 28px;'></span></div></a>
+  <a href="#" id="reports"><div style='height: 34px;'><span><img src='reports.png' style='height: 28px; width: 28px;'></span></div></a>
+</div>
+
+<div id="main">
+	Content goes here.
+</div>
+
+<script>
+
+function flipNav()
+{
+	//alert(document.getElementById("mySidenav").style.width);
+	if (document.getElementById("mySidenav").style.width == "200px")
+	{
+		document.getElementById("mySidenav").style.width = "50px";
+	    document.getElementById("main").style.marginLeft= "30px";
+	    document.body.style.backgroundColor = "white";
+	    document.getElementById('xact').innerHTML = "<div style='height: 34px;'><span><img src='xact.png' style='height: 28px; width: 28px;'></span></div>";
+	    document.getElementById('client').innerHTML = "<div style='height: 34px;'><span><img src='client.png' style='height: 28px; width: 28px;'></span></div>";
+	    document.getElementById('item').innerHTML = "<div style='height: 34px;'><span><img src='item.png' style='height: 28px; width: 28px;'></span></div>";
+	    document.getElementById('settings').innerHTML = "<div style='height: 34px;'><span><img src='settings.png' style='height: 28px; width: 28px;'></span></div>";
+	    document.getElementById('reports').innerHTML = "<div style='height: 34px;'><span><img src='reports.png' style='height: 28px; width: 28px;'></span></div>";
+	}
+	else
+	{
+		document.getElementById("mySidenav").style.width = "200px";
+    	document.getElementById("main").style.marginLeft = "180px";
+   	 	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    	document.getElementById('xact').innerHTML = "<div style='height: 34px;'><span><img src='xact.png' style='height: 28px; width: 28px;'></span><span>  &nbsp;Transaction</span></div>";
+    	document.getElementById('client').innerHTML = "<div style='height: 34px;'><span><img src='client.png' style='height: 28px; width: 28px;'></span><span>  &nbsp;Client</span></div>";
+    	document.getElementById('item').innerHTML = "<div style='height: 34px;'><span><img src='item.png' style='height: 28px; width: 28px;'></span><span>  &nbsp;Item</span></div>";
+    	document.getElementById('settings').innerHTML = "<div style='height: 34px;'><span><img src='settings.png' style='height: 28px; width: 28px;'></span><span>  &nbsp;Settings</span></div>";
+    	document.getElementById('reports').innerHTML = "<div style='height: 34px;'><span><img src='reports.png' style='height: 28px; width: 28px;'></span><span>  &nbsp;Reports</span></div>";
+	}
+}
+</script>
+     
+</body>
+</html> 

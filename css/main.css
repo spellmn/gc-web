@@ -1,0 +1,104 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+}
+</style>
+
+
+.error
+{
+    color: red;
+}
+
+.example_d {
+color: #666A00 !important;
+text-transform: uppercase;
+background: ##666A00;
+padding: 10px;
+border: 4px solid #666A00 !important;
+border-radius: 6px;
+display: inline-block;
+}
+
+.example_d:hover {
+color: #666A00 !important;
+border-radius: 50px;
+border-color: #666A00 !important;
+transition: all 0.3s ease 0s;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color 0.20s;
+    background-color: #111;
+}
+
+.sidenav {
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.10s;
+    position: absolute;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.20s;
+
+}
+
+.sidenav a:hover {
+    color: #666A00;
+}
+
+.sidenav .closebtn {
+	width: 20px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    font-size: 36px;
+    /* margin-left: 50px; */
+
+}
+
+#main {
+	width: 100%;
+	height: 100%;
+    position: absolute;
+    top: 0px;
+    transition: margin-left .5s;
+    padding: 16px;
+    padding-top: 16px;
+    margin-left: 30px; 
+    
+    background-color: #111;
+    color: green;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+span {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+img {
+  vertical-align: middle;
+  display: table-cell;
+}
+
